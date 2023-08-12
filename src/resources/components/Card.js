@@ -14,7 +14,7 @@ export default function ResourceCard({ resource }) {
 				<p className="font-bold text-center w-full">{resource.name}</p>
 			</header>
 			<footer className="w-full">
-				<Link href={`/resources/${resource.slug}`}>Explore →</Link>
+				<Link href={`/resources/${resource.slug}`}>Explore</Link>
 				<div>
 					<span className="pill">{resource.category}</span>
 				</div>

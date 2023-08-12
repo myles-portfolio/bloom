@@ -6,6 +6,12 @@
 	--foreground-rgb: 0, 0, 0;
 	--background-start-rgb: 244, 242, 242;
 	--background-end-rgb: 255, 255, 255;
+
+	--color-spring-wood: #f4f2f2;
+	--color-plo-blue: #85a6cd;
+	--color-royal-blue: #246aeb;
+	--color-amaranth: #ed3c5d;
+	--color-shark: #25292a;
 }
 
 @media (prefers-color-scheme: light) {
@@ -124,16 +130,42 @@ h1 {
 	background-color: #000;
 	color: #fff;
 }
+
 .nav-link.white:hover {
-	background-color: #246aeb;
+	background-color: var(--color-royal-blue);
 	color: #fff;
 }
+
 .nav-link.black:hover {
-	background-color: #ed3c5d;
+	background-color: var(--color-amaranth);
 	color: #000;
 }
+
 .nav-link.white {
 	margin-right: 0;
 	margin-left: 0;
 	padding: 1.5rem 3vw;
+}
+
+.product-card-grid {
+	padding: 0 20px;
+	--min-grid-absolute-size: 16rem;
+	--max-grid-relative-size: 33%;
+}
+
+.grid,
+.resource-card-grid {
+	display: grid;
+	grid-template-columns: repeat(
+		auto-fill,
+		minmax(
+			max(
+				min(var(--min-grid-absolute-size), 100%),
+				var(--max-grid-relative-size) - 1rem
+			),
+			1fr
+		)
+	);
+	grid-gap: 1rem;
+	gap: 1rem;
 }

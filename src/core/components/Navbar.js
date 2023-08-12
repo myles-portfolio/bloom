@@ -12,8 +12,8 @@ export default function Navbar() {
 				<Link href="/login" className="nav-link white">
 					Log in
 				</Link>
-				<Link href="/pricing" className="nav-link black">
-					Pricing
+				<Link href="/contribute" className="nav-link black">
+					Contribute
 				</Link>
 			</div>
 		</div>

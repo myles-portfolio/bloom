@@ -1,9 +1,23 @@
-import RootLayout from "@/core/layouts/layout";
-import "src/styles/globals.css";
+import RootLayout from "@/app/layouts/layout";
+import "@/styles/globals.css";
 
-export default function App({ Component, pageProps }) {
+export async function getServerSideProps(context) {
+	const supabase = createServerComponentClient({
+		cookies: context.req.cookies,
+	});
+
+	const {
+		data: { session },
+	} = await supabase.auth.getSession();
+
+	const accessToken = session?.access_token || null;
+
+	return { props: { accessToken } };
+}
+
+export default function App({ Component, pageProps, accessToken }) {
 	return (
-		<RootLayout>
+		<RootLayout accessToken={accessToken}>
 			<Component {...pageProps} />
 		</RootLayout>
 	);

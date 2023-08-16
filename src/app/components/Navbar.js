@@ -9,7 +9,7 @@ export default function Navbar() {
 			</Link>
 
 			<div className="nav-menu">
-				<Link href="/login" className="nav-link white">
+				<Link href="/sign-in" className="nav-link white">
 					Log in
 				</Link>
 				<Link href="/contribute" className="nav-link black">

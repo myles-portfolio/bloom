@@ -1,4 +1,4 @@
-import RootLayout from "@/app/layouts/layout";
+import RootLayout from "@/layouts/layout";
 import "@/styles/globals.css";
 
 export async function getServerSideProps(context) {

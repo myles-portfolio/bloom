@@ -17,9 +17,7 @@ export default function Home() {
 							</p>
 							<div className="flex justify-center">
 								<Link href="/resources" className="cursor-pointer relative p-0">
-									<button className="py-4 px-16 rounded-md bg-[var(--color-royal-blue)] text-white text-lg text-center no-underline border-solid border-black border">
-										Start Learning
-									</button>
+									<button className="button">Start Learning</button>
 								</Link>
 							</div>
 						</div>

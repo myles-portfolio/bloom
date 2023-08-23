@@ -1,7 +1,6 @@
 import AuthProvider from "@/auth/AuthProvider";
-import Meta from "@/app/components/Meta";
-import Navbar from "@/app/components/Navbar";
-import "@/styles/globals.css";
+import Meta from "@/components/Meta";
+import Navbar from "@/components/Navbar";
 
 export default function RootLayout({ children, accessToken }) {
 	return (
